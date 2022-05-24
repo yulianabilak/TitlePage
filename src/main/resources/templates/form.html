@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="ua">
+
+<head>
+    <meta charset="utf-8">
+    <title>Форма</title>
+    <style>
+        input,
+        select {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 430px;
+        }
+
+        #submit,
+        #reset {
+            margin-top: 15px;
+            width: auto;
+        }
+
+        #reset {
+            margin-left: 20px;
+        }
+
+        body {
+            background-color: #f6f6f6;
+        }
+
+        label {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<form th:method="POST" th:action="@{/your-title-page}" th:object="${courseProject}">
+    <h1>Форма для титульної сторінки курсової роботи</h1>
+
+    <label for="university">1. Університет</label>
+    <input th:field="*{university}" type="text" id="university">
+    <br>
+
+    <label for="department">2. Кафедра</label>
+    <input th:field="*{department}" type="text" id="department">
+    <br>
+
+    <label for="discipline">3. Назва дисципліни</label>
+    <input th:field="*{discipline}" type="text" id="discipline">
+    <br>
+
+    <label for="topic">4. Тема курсової</label>
+    <input th:field="*{topic}" type="text" id="topic">
+    <br>
+
+    <label for="yearOfStudy">5. Курс</label>
+    <select id="yearOfStudy" th:field="*{yearOfStudy}">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br>
+
+    <label for="group">6. Група</label>
+    <input th:field="*{group}" type="text" id="group">
+    <br>
+
+    <label for="specialtyCode">7. Код спеціальності</label>
+    <input th:field="*{specialtyCode}" type="text" id="specialtyCode">
+    <br>
+
+    <label for="specialty">8. Назва спеціальності</label>
+    <input th:field="*{specialty}" type="text" id="specialty">
+    <br>
+
+    <label for="author">9. Прізвище, ініціали автора</label>
+    <input th:field="*{author}" type="text" id="author">
+    <br>
+
+    <label for="advisor">10. Прізвище, ініціали керівника</label>
+    <input th:field="*{advisor}" type="text" id="advisor">
+    <br>
+
+    <label for="normcontroller">10. Прізвище, ініціали нормоконтролера</label>
+    <input th:field="*{normcontroller}" type="text" id="normcontroller">
+    <br>
+
+    <label for="city">11. Місто</label>
+    <input th:field="*{city}" type="text" id="city">
+    <br>
+
+    <label for="year">12. Рік захисту</label>
+    <input th:field="*{year}" type="number" step="1" min="1900" max="2100" id="year">
+    <br>
+
+    <input type="submit" id="submit" value="Отримати титульну сторінку">
+    <input type="reset" id="reset" value="Очистити">
+</form>
+</body>
+
+</html>

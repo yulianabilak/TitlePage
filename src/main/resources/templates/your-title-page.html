@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="ua">
+
+<head>
+    <meta charset="utf-8">
+    <title>Титульна сторінка</title>
+    <link rel="stylesheet" th:href="@{/styles/styles.css}" />
+</head>
+
+<body>
+<div id="container">
+    <div id="institution" class="centered">
+        <p>Міністерство освіти і науки України</p>
+        <p th:text="${courseProject.getUniversity()}"></p>
+    </div>
+    <div id="department">
+        <p class="centered underlined" th:text="${courseProject.getDepartment()}"></p>
+        <p class="specs end-of-sec centered">(повна назва кафедри, циклової комісії)</p>
+    </div>
+    <div id="subject">
+        <h1 class="centered">КУРСОВА РОБОТА</h1>
+        <div class="flex">
+            <p>з</p>
+            <div class="custom-container underlined stretch">
+                <span class="underlined" th:text="${courseProject.getDiscipline()}"></span>
+            </div>
+        </div>
+        <p class="specs end-of-sec centered">(назва дисципліни)</p>
+        <div class="flex">
+            <p>на тему:</p>
+            <div class="custom-container underlined stretch">
+                    <span class="underlined">
+                        <strong th:text="${courseProject.getTopic()}">
+                        </strong>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <div id="author">
+        <p>Виконав: студент(ка) <span class="year underlined" th:text="${courseProject.getYearOfStudy()}"></span>курсу,</p>
+        <p>групи <span id="group" class="underlined" th:text="${courseProject.getGroup()}"></span></p>
+        <div class="flex">
+            <span>спеціальності</span>
+            <p id="spec-code" class="underlined stretch" th:text="${courseProject.getSpecialtyCode()}"></p>
+        </div>
+        <p class="specs" id="specs-code">(шифр спеціальності)</p>
+        <p class="underlined centered" th:text="${courseProject.getSpecialty()}"></p>
+        <p class="specs centered">(назва спеціальності)</p>
+        <div class="flex">
+            <span id="signature" class="underlined">-</span>
+            <p class="underlined stretch centered" th:text="${courseProject.getAuthor()}"></p>
+        </div>
+        <span class="specs" id="specs-signature">(підпис)</span>
+        <span class="specs" id="specs-author">(прізвище, ініціали)</span>
+        <div class="flex">
+            <span>Керівник</span>
+            <p id="advisor" class="underlined stretch centered" th:text="${courseProject.getAdvisor()}"></p>
+        </div>
+        <p class="specs specs-advisors">(прізвище, ініціали)</p>
+        <div class="flex">
+            <span>Нормоконтролер</span>
+            <p id="norm-controller" class="underlined stretch centered" th:text="${courseProject.getNormcontroller()}"></p>
+        </div>
+        <p class="specs specs-advisors">(прізвище, ініціали)</p>
+    </div>
+    <div id="defense" class="flex">
+        <div id="admitted">
+            <p><b>До захисту допущено:</b></p>
+            <p id="date">від «<span class="day underlined"></span>»
+                <span class="month underlined"></span>20
+                <span class="year underlined"></span>p.
+            </p>
+            <div class="flex">
+                <span>Керівник</span>
+                <p id="advisor-sign" class="underlined stretch centered"></p>
+            </div>
+            <p class="specs specs-adv-sign">(підпис)</p>
+            <div class="flex">
+                <span>Нормоконтролер</span>
+                <p id="norm-controller-sign" class="underlined stretch centered"></p>
+            </div>
+            <p class="specs specs-adv-sign">(підпис)</p>
+        </div>
+        <div class="stretch">
+            <p><b>Дата захисту:</b></p>
+            <p>«<span class="day underlined"></span>»
+                <span class="month underlined"></span>20
+                <span class="year underlined"></span>p.
+            </p>
+            <p><b>Оцінка:</b></p>
+            <div class="flex">
+                <span>за нац. шкалою</span>
+                <p id="national-grade" class="underlined stretch centered"></p>
+            </div>
+            <p class="specs specs-grade">(словами)</p>
+            <div class="flex">
+                <span>кількість балів</span>
+                <p id="number-grade" class="underlined stretch centered"></p>
+            </div>
+            <p class="specs specs-grade">(цифра)</p>
+            <div class="flex">
+                <span>за шкалою ECTS</span>
+                <p id="letter-grade" class="underlined stretch centered"></p>
+            </div>
+            <p class="specs specs-grade">(літера)</p>
+        </div>
+    </div>
+    <div id="city-year" class="centered">
+        <span th:text="${courseProject.getCity()}"></span>
+        <span th:text="${courseProject.getYear()}"></span>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+body {
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18pt;
+    width: 900px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+p,
+span {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    width: 660px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.underlined {
+    border-bottom: 1px solid black;
+}
+
+.stretch {
+    flex-grow: 1;
+}
+
+.specs {
+    font-size: 12pt;
+    margin-bottom: 3px;
+}
+
+#department {
+    margin-top: 20px;
+}
+
+#subject {
+    margin-top: 100px;
+}
+
+#subject>h1 {
+    font-size: 27pt;
+    margin-bottom: 10px;
+}
+
+.end-of-sec {
+    margin-bottom: 15px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex>p {
+    white-space: nowrap;
+}
+
+.custom-container {
+    text-align: justify;
+    word-break: break-word;
+}
+
+.custom-container>span {
+    padding-bottom: 1px;
+    padding-left: 10px;
+}
+
+#author {
+    font-size: 16pt;
+    margin-top: 60px;
+    padding-left: 290px;
+}
+
+.year {
+    margin-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#group {
+    margin-left: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#spec-code {
+    margin-left: 5px;
+    padding-left: 25px;
+}
+
+#specs-code {
+    padding-left: 150px;
+}
+
+#signature {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: 30px;
+}
+
+#specs-signature {
+    padding-left: 20px;
+}
+
+#specs-author {
+    padding-left: 110px;
+}
+
+#advisor {
+    margin-left: 47.25px;
+}
+
+.specs-advisors {
+    padding-left: 190px;
+}
+
+#norm-controller {
+    margin-left: 3px;
+}
+
+#defense {
+    margin-top: 100px;
+    font-size: 16pt;
+    column-gap: 85px;
+}
+
+.day {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.month {
+    padding-left: 63px;
+    padding-right: 63px;
+}
+
+.specs-adv-sign {
+    padding-left: 200px;
+}
+
+#norm-controller-sign {
+    margin-left: 7px;
+}
+
+#advisor-sign {
+    margin-left: 77.62px;
+}
+
+#national-grade {
+    margin-left: 21.52px;
+}
+
+#number-grade {
+    margin-left: 27.12px;
+}
+
+#letter-grade {
+    margin-left: 7px;
+}
+
+.specs-grade {
+    padding-left: 190px;
+}
+
+#city-year {
+    margin-top: 60px;
+}
+
+#date {
+    margin-bottom: 17px;
+}
